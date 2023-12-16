@@ -24,7 +24,7 @@ import android.telephony.PhoneNumberUtils;
 import android.util.Log;
 
 import java.util.HashMap;
-
+//2023  11.11 Test.
 public class Contact {
     private static HashMap<String, String> sContactCache;
     private static final String TAG = "Contact";
