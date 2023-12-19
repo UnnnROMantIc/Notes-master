@@ -28,7 +28,9 @@ import net.micode.notes.R;
 import net.micode.notes.data.Notes;
 import net.micode.notes.tool.DataUtils;
 import net.micode.notes.tool.ResourceParser.NoteItemBgResources;
-
+/**
+ * `NotesListItem` 类是自定义的列表项视图，用于显示笔记和文件夹的信息。
+ */
 
 public class NotesListItem extends LinearLayout {
     private ImageView mAlert;
@@ -37,7 +39,11 @@ public class NotesListItem extends LinearLayout {
     private TextView mCallName;
     private NoteItemData mItemData;
     private CheckBox mCheckBox;
-
+    /**
+     * 构造方法，初始化列表项视图的各个控件。
+     *
+     * @param context 上下文对象。
+     */
     public NotesListItem(Context context) {
         super(context);
         inflate(context, R.layout.note_item, this);
@@ -47,7 +53,14 @@ public class NotesListItem extends LinearLayout {
         mCallName = (TextView) findViewById(R.id.tv_name);
         mCheckBox = (CheckBox) findViewById(android.R.id.checkbox);
     }
-
+    /**
+     * 绑定数据到列表项视图，显示相关信息。
+     *
+     * @param context     上下文对象。
+     * @param data        笔记项数据。
+     * @param choiceMode  是否为多选模式。
+     * @param checked     是否被选中。
+     */
     public void bind(Context context, NoteItemData data, boolean choiceMode, boolean checked) {
         if (choiceMode && data.getType() == Notes.TYPE_NOTE) {
             mCheckBox.setVisibility(View.VISIBLE);

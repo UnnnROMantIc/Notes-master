@@ -15,13 +15,12 @@
  */
 
 package net.micode.notes.tool;
-
 import android.content.Context;
 import android.preference.PreferenceManager;
 
 import net.micode.notes.R;
 import net.micode.notes.ui.NotesPreferenceActivity;
-
+// 笔记背景颜色常量
 public class ResourceParser {
 
     public static final int YELLOW           = 0;

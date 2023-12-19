@@ -71,19 +71,20 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+// 头部视图持有者类，包含头部相关控件的引用
 public class NoteEditActivity extends Activity implements OnClickListener,
         NoteSettingChangedListener, OnTextViewChangeListener {
     private class HeadViewHolder {
         public TextView tvModified;
+        // 修改日期文本视图
 
         public ImageView ivAlertIcon;
-
+        // 提醒图标
         public TextView tvAlertDate;
-
-        public ImageView ibSetBgColor;
+        // 提醒日期文本视图
+        public ImageView ibSetBgColor; // 设置背景颜色按钮
     }
-
+    // 背景选择按钮映射，将按钮的 ID 映射到对应的背景颜色常量
     private static final Map<Integer, Integer> sBgSelectorBtnsMap = new HashMap<Integer, Integer>();
     static {
         sBgSelectorBtnsMap.put(R.id.iv_bg_yellow, ResourceParser.YELLOW);
@@ -92,7 +93,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         sBgSelectorBtnsMap.put(R.id.iv_bg_green, ResourceParser.GREEN);
         sBgSelectorBtnsMap.put(R.id.iv_bg_white, ResourceParser.WHITE);
     }
-
+    // 背景选择按钮选中状态映射，将背景颜色常量映射到对应的选中按钮的 ID
     private static final Map<Integer, Integer> sBgSelectorSelectionMap = new HashMap<Integer, Integer>();
     static {
         sBgSelectorSelectionMap.put(ResourceParser.YELLOW, R.id.iv_bg_yellow_select);
@@ -101,7 +102,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         sBgSelectorSelectionMap.put(ResourceParser.GREEN, R.id.iv_bg_green_select);
         sBgSelectorSelectionMap.put(ResourceParser.WHITE, R.id.iv_bg_white_select);
     }
-
+    // 背景选择按钮选中状态映射，将背景颜色常量映射到对应的选中按钮的 ID
     private static final Map<Integer, Integer> sFontSizeBtnsMap = new HashMap<Integer, Integer>();
     static {
         sFontSizeBtnsMap.put(R.id.ll_font_large, ResourceParser.TEXT_LARGE);
@@ -109,7 +110,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         sFontSizeBtnsMap.put(R.id.ll_font_normal, ResourceParser.TEXT_MEDIUM);
         sFontSizeBtnsMap.put(R.id.ll_font_super, ResourceParser.TEXT_SUPER);
     }
-
+    // 字体大小按钮映射，将按钮的 ID 映射到对应的字体大小常量
     private static final Map<Integer, Integer> sFontSelectorSelectionMap = new HashMap<Integer, Integer>();
     static {
         sFontSelectorSelectionMap.put(ResourceParser.TEXT_LARGE, R.id.iv_large_select);
@@ -117,7 +118,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         sFontSelectorSelectionMap.put(ResourceParser.TEXT_MEDIUM, R.id.iv_medium_select);
         sFontSelectorSelectionMap.put(ResourceParser.TEXT_SUPER, R.id.iv_super_select);
     }
-
+    // 字体选择按钮选中状态映射，将字体大小常量映射到对应的选中按钮的 ID
     private static final String TAG = "NoteEditActivity";
 
     private HeadViewHolder mNoteHeaderHolder;
