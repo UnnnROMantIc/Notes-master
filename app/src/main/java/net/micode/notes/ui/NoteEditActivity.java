@@ -74,6 +74,7 @@ import java.util.regex.Pattern;
 // 头部视图持有者类，包含头部相关控件的引用
 public class NoteEditActivity extends Activity implements OnClickListener,
         NoteSettingChangedListener, OnTextViewChangeListener {
+
     private class HeadViewHolder {
         public TextView tvModified;
         // 修改日期文本视图
@@ -861,4 +862,5 @@ public class NoteEditActivity extends Activity implements OnClickListener,
     private void showToast(int resId, int duration) {
         Toast.makeText(this, resId, duration).show();
     }
+
 }

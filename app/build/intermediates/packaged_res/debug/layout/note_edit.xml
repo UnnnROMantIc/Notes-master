@@ -25,7 +25,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
-
+        <!--顶栏代码：当前时间（TextView），闹钟icon（ImageView）,提醒时间（TextView），颜色选择按钮(ImageButton)
+        -->
         <LinearLayout
             android:id="@+id/note_title"
             android:layout_width="fill_parent"
@@ -62,7 +63,8 @@
                 android:layout_gravity="center"
                 android:background="@drawable/bg_btn_set_color" />
         </LinearLayout>
-
+        <!--正文部分：背景颜色选择（ImageView），垂直滚动条（ScrollView），字体大小设置（FrameLayout）
+        -->
         <LinearLayout
             android:id="@+id/sv_note_edit"
             android:layout_width="fill_parent"
@@ -130,9 +132,9 @@
         android:background="@drawable/note_edit_color_selector_panel"
         android:layout_marginTop="30dip"
         android:layout_marginRight="8dip"
-        android:layout_gravity="top|right"
-        android:visibility="gone">
+        android:layout_gravity="top|right">
 
+        <!--选择背景色为黄色-->
         <FrameLayout
             android:layout_width="0dip"
             android:layout_height="match_parent"
@@ -154,6 +156,7 @@
                 android:src="@drawable/selected" />
         </FrameLayout>
 
+        <!--选择背景色为蓝色-->
         <FrameLayout
             android:layout_width="0dip"
             android:layout_height="match_parent"
@@ -175,6 +178,7 @@
                 android:src="@drawable/selected" />
         </FrameLayout>
 
+        <!--选择背景色为白色-->
         <FrameLayout
             android:layout_width="0dip"
             android:layout_height="match_parent"
@@ -196,6 +200,7 @@
                 android:src="@drawable/selected" />
         </FrameLayout>
 
+        <!--选择背景色为绿色-->
         <FrameLayout
             android:layout_width="0dip"
             android:layout_height="match_parent"
@@ -216,6 +221,7 @@
                 android:src="@drawable/selected" />
         </FrameLayout>
 
+        <!--选择背景色为红色-->
         <FrameLayout
             android:layout_width="0dip"
             android:layout_height="match_parent"
@@ -237,14 +243,15 @@
         </FrameLayout>
     </LinearLayout>
 
+    <!--字体大小设置-->
     <LinearLayout
         android:id="@+id/font_size_selector"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/font_size_selector_bg"
-        android:layout_gravity="bottom"
-        android:visibility="gone">
+        android:layout_gravity="bottom">
 
+        <!--选择小字号-->
         <FrameLayout
             android:id="@+id/ll_font_small"
             android:layout_width="0dip"
@@ -283,6 +290,7 @@
                 android:src="@drawable/selected" />
         </FrameLayout>
 
+        <!--选择正常字号-->
         <FrameLayout
             android:id="@+id/ll_font_normal"
             android:layout_width="0dip"
@@ -321,6 +329,7 @@
                 android:src="@drawable/selected" />
         </FrameLayout>
 
+        <!--选择大字号-->
         <FrameLayout
             android:id="@+id/ll_font_large"
             android:layout_width="0dip"
@@ -359,6 +368,7 @@
                 android:src="@drawable/selected" />
         </FrameLayout>
 
+        <!--选择超大字号-->
         <FrameLayout
             android:id="@+id/ll_font_super"
             android:layout_width="0dip"
@@ -391,10 +401,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
                 android:focusable="false"
+
                 android:visibility="gone"
                 android:layout_marginRight="6dip"
-                android:layout_marginBottom="-7dip"
-                android:src="@drawable/selected" />
-        </FrameLayout>
-    </LinearLayout>
-</FrameLayout>
+                    android:layout_marginBottom="-7dip"
+                    android:src="@drawable/selected" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
